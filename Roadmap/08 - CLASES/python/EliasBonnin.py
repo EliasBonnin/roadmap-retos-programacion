@@ -29,6 +29,8 @@ mi_programador.print()  # Alteramos los valores y mostramos
 # Extra
 
 
+# Pila
+
 class Pila:
 
     def __init__(self):
@@ -61,3 +63,39 @@ my_pila.mostrar()
 my_pila.borrar()
 
 my_pila.mostrar()
+
+# Cola
+
+
+class Cola:
+
+    def __init__(self):
+        self.cola = []
+
+    def entrada(self, item):
+        self.cola.append(item)
+
+    def contar(self):
+        return len(self.cola)
+
+    def borrar(self):
+        if self.contar == 0:
+            return None
+        return self.cola.pop(0)
+
+    def mostrar(self):
+        for item in self.cola:
+            print(item)
+
+
+my_cola = Cola()
+
+my_cola.entrada("a")
+my_cola.entrada("b")
+my_cola.entrada("c")
+
+my_cola.mostrar()
+
+my_cola.borrar()
+
+my_cola.mostrar()
